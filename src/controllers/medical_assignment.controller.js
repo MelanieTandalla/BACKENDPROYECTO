@@ -52,7 +52,7 @@ const updateMedicalAssignment = async(req, res) => {
 };
 const deleteMedicalAssignment = async(req, res) => {
     const id=req.params.id;
-    const response = await pool.query('DELETE FROM cita_medica WHERE id_asignacion_cita_medica = $1',[id]);
+    const response = await pool.query('DELETE FROM asignacionCitaMedica WHERE id_asignacion_cita_medica = $1',[id]);
     res.json(`Asignacion medica con id: ${id} eliminada correctamente`);
 };
 
